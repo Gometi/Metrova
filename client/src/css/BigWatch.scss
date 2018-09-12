@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline");
+
+.text{
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    margin-top: 80px;
+}
+
+.big-watch{
+   margin-left: 200px;
+   
+   div{
+       position: absolute;
+   }
+}
+
+.center{
+    background: #262626;   
+    border-radius: 200px;
+    width: 365px;
+    height: 365px;
+    top: 124px;
+    left: 346px;
+}
+.middle{
+    background: radial-gradient(#CEB78D, #262626, #262626);  
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    top: 281px;
+    left: 504px;
+    z-index: 1;
+}
+%hand{
+    left: 523px;
+    width: 9px;
+    height: 180px;
+    border-radius: 100px 100px 100px 100px;
+    transform-origin: bottom;
+    background: #181818;
+}
+.secondHand{
+    @extend %hand;
+    top: 127px;
+    width: 6px;
+    background: #CEB78D;
+}
+.minuteHand{
+    @extend %hand;
+    top: 127px;
+    border: 2px solid #CEB78D;
+}
+.hourHand{
+    @extend %hand;
+    top: 204px;
+    height: 100px;
+    border: 2px solid #714A21;
+}
+
+.number{
+    width: 68px;
+    font-family: 'Bungee Inline', cursive;
+    color: #CFA46F;
+    font-size: 50px;
+}
+.no-number{
+    height: 13px;
+    width: 47px;   
+    border: 2px solid #CFA46F;
+}
+.no2{
+    top: 195px;
+    left: 627px;
+    transform: rotate(60deg);
+}
+.no4{
+    top: 351px;
+    left: 627px;
+    transform: rotate(-60deg);
+}
+.no8{
+     top: 351px;
+    left: 359px;
+    transform: rotate(60deg);
+}
+.no10{
+    top:195px;
+    left: 359px;
+    transform: rotate(-60deg);
+}
+.no1{
+    top: 173px;
+    left: 579px;
+    transform: rotate(-60deg); 
+}
+.no3{
+    top: 303px;
+    left: 654px;
+}
+.no5{
+    top: 432px;
+    left: 578px;
+    transform: rotate(60deg);
+}
+.no6{
+    top: 452px;
+    left: 503px;
+    transform: rotate(90deg);
+}
+.no7{
+    top: 432px;
+    left: 427px;
+    transform: rotate(-60deg);
+}
+.no9{
+    top: 303px;
+    left: 352px;
+}
+.no11{
+    top: 173px;
+    left: 427px;
+    transform: rotate(60deg);
+}
+.no12{
+    top: 155px;
+    left: 503px;
+    transform: rotate(90deg);
+}
+
+

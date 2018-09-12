@@ -1,0 +1,53 @@
+.brand-statement-container{
+    background-image: url('../images/white-business-background.jpg');
+    background-size: cover;
+}
+.brand-statement{
+    font-size: 30px;
+    font-family: cursive;
+}
+@keyframes image_animation{
+    0%{
+        display: block;
+        left: 0px;
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        left: 800px;
+    }
+}
+
+%slideShow-animation{
+        animation-name: image_animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.slideShow{
+    img{
+         position: absolute;
+         top: 50px;
+         left: -700px;
+         height: 200px;
+          @extend %slideShow-animation;
+    }
+}
+ .watch1{
+       @extend %slideShow-animation;
+    }
+    .watch2{
+       @extend %slideShow-animation;
+       animation-delay: 2s;
+       z-index: 1;
+    }
+    .watch3{
+       @extend %slideShow-animation;
+       animation-delay: 4s;
+       z-index: 2;
+    }
+    .line1{
+        border: 2px solid black;
+        height: 7px;
+    }

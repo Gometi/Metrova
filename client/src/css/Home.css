@@ -1,0 +1,71 @@
+.brand-statement-container {
+  background-image: url("../images/white-business-background.jpg");
+  background-size: cover;
+}
+
+.brand-statement {
+  font-size: 30px;
+  font-family: cursive;
+}
+
+@-webkit-keyframes image_animation {
+  0% {
+    display: block;
+    left: 0px;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    left: 800px;
+  }
+}
+
+@keyframes image_animation {
+  0% {
+    display: block;
+    left: 0px;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    left: 800px;
+  }
+}
+
+.slideShow img, .watch1, .watch2, .watch3 {
+  -webkit-animation-name: image_animation;
+          animation-name: image_animation;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.slideShow img {
+  position: absolute;
+  top: 50px;
+  left: -700px;
+  height: 200px;
+}
+
+.watch2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  z-index: 1;
+}
+
+.watch3 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  z-index: 2;
+}
+
+.line1 {
+  border: 2px solid black;
+  height: 7px;
+}
+/*# sourceMappingURL=Home.css.map */
