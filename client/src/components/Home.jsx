@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../css/Home.css";
+import NavBar from "./NavBar";
 import BigWatch from "./BigWatch";
 class Home extends Component {
     constructor(props) {
@@ -34,6 +35,7 @@ class Home extends Component {
 
         return (
             <div className="container-fluid">
+            <NavBar/>
                 <div className="row brand-statement-container">
                     <div className="brand-statement col-4">The Ultimate symbol of style and sophistication, our collection of mens's designer watch
                       brands have been chosen to showcase innovative design, cutting edge technology and the latest on-trend materials.

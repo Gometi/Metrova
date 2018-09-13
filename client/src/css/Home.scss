@@ -1,8 +1,10 @@
 .brand-statement-container{
+    height: 500px;
     background-image: url('../images/white-business-background.jpg');
     background-size: cover;
 }
 .brand-statement{
+    margin-top: 50px;
     font-size: 30px;
     font-family: cursive;
 }
@@ -26,6 +28,7 @@
 }
 
 .slideShow{
+    margin-top: 40px;
     img{
          position: absolute;
          top: 50px;

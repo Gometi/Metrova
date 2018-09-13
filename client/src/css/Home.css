@@ -1,9 +1,11 @@
 .brand-statement-container {
+  height: 500px;
   background-image: url("../images/white-business-background.jpg");
   background-size: cover;
 }
 
 .brand-statement {
+  margin-top: 50px;
   font-size: 30px;
   font-family: cursive;
 }
@@ -43,6 +45,10 @@
           animation-duration: 8s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.slideShow {
+  margin-top: 40px;
 }
 
 .slideShow img {
