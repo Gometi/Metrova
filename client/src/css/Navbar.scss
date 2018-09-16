@@ -3,6 +3,16 @@
 
 .navigation{
     height: 180px;  
+    background: rgb(184, 184, 184);
+}
+
+.links{
+    color: black;
+}
+
+.links:hover{
+  text-decoration: none;
+  color:white;
 }
 
 .title{
@@ -48,6 +58,10 @@
     left: 150px; 
     animation: move-down 5s;
 }
+.home:hover{
+    text-decoration: none;
+}
+
 .analog{
     left: 350px;
     animation: move-down 8s;

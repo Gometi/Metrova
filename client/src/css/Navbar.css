@@ -2,6 +2,16 @@
 @import url("https://fonts.googleapis.com/css?family=Aladin");
 .navigation {
   height: 180px;
+  background: #b8b8b8;
+}
+
+.links {
+  color: black;
+}
+
+.links:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .title {
@@ -47,6 +57,10 @@
   left: 150px;
   -webkit-animation: move-down 5s;
           animation: move-down 5s;
+}
+
+.home:hover {
+  text-decoration: none;
 }
 
 .analog {

@@ -1,13 +1,14 @@
 import React from "react";
 import "../css/Navbar.css";
+import { Link } from "react-router-dom";
 
 let NavBar = ()=>{
     return (
         <div>
             <div className="navigation">
-                <div className="home navBar">Home</div>
+                <Link to="/" className="home links navBar">Home</Link>
                 <div className="analog navBar">Analog
-                    <div className="list">Jaeger Alpha</div>
+                    <Link to="/brand/jaeger-alpha-analog" className="list links">Jaeger Alpha</Link>
                     <div className="list">Mille Deluxe</div>
                 </div>
                 <div className="digital navBar">Digital
