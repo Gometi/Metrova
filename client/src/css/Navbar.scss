@@ -21,7 +21,7 @@
     left: 600px;
     font-size: 50px;
     font-family: 'Aladin', cursive;
-    animation: title-animation 10s linear;
+    // animation: title-animation 10s linear;
 }
 .navBar{
     position: absolute;
@@ -56,7 +56,7 @@
 
 .home{
     left: 150px; 
-    animation: move-down 5s;
+    // animation: move-down 5s;
 }
 .home:hover{
     text-decoration: none;
@@ -64,19 +64,19 @@
 
 .analog{
     left: 350px;
-    animation: move-down 8s;
+    // animation: move-down 8s;
 }
 .digital{
     left: 550px;
-    animation: move-down 11s;
+    // animation: move-down 11s;
 }
 .about{
     left: 750px;
-    animation: move-down 14s;
+    // animation: move-down 14s;
 }
 .contact{
     left: 950px;
-    animation: move-down 17s;
+    // animation: move-down 17s;
 }
 
 @keyframes move-down {
