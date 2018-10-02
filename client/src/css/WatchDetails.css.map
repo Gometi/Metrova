@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,sEAAI;AAEZ,AAAA,EAAE,CAAA;EACE,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;CAClB;;AACD,AACC,MADK,CACL,EAAE,CAAA;EACE,WAAW,EAAE,yBAAyB;CACvC",
+    "sources": [
+        "WatchDetails.scss"
+    ],
+    "names": [],
+    "file": "WatchDetails.css"
+}

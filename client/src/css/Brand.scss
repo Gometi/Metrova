@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css?family=Aclonica|Bubblegum+Sans");
 
 .brand-image{
     width: 500px;
@@ -10,5 +10,10 @@
     h3{
         font-size: 40px;
         font-weight: bold;
+    }
+}
+.card-body{
+    h4{
+        font-family: 'Bubblegum Sans', cursive;
     }
 }

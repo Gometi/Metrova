@@ -9,22 +9,51 @@ export default {
         {
             name: 'Nixon',
             image: require('../../images/nixon1.jpeg'),
-            price: 90.00
+            price: 90.55,
+            case_size: '33mm',
+            case_thickness: '7mm',
+            strap_width: '20mm',
+            glass: 'STELLA CRYSTAL',
+            water_resistance: '3 ATM'
         },
         {
             name: 'Casio',
             image: require('../../images/casio-1st.jpg'),
-            price: 100.00
+            price: 100.00, case_size: '33mm',
+            case_thickness: '7mm',
+            strap_width: '20mm',
+            glass: 'GS CRYSTAL',
+            water_resistance: '3 ATM'
         },
         {
             name: 'Gshock',
             image: require('../../images/gshock1-1st.jpg'),
-            price: 75.55
+            price: 75.55,
+            case_size: '33mm',
+            case_thickness: '7mm',
+            strap_width: '20mm',
+            glass: 'STELLA CRYSTAL',
+            water_resistance: '3 ATM'
         },
         {
             name: 'Baby',
             image: require('../../images/baby.jpg'),
-            price: 60.00
+            price: 60.55,
+            case_size: '33mm',
+            case_thickness: '7mm',
+            strap_width: '20mm',
+            glass: 'STELLA CRYSTAL',
+            water_resistance: '3 ATM'
+        },
+        {
+            name: 'Illuminator',
+            image: require('../../images/illuminator.jpg'),
+            price: 72.55,
+            case_size: '36mm',
+            case_thickness: '6mm',
+            strap_width: '20mm',
+            glass: 'GS CRYSTAL',
+            water_resistance: '3 ATM'
         }
     ]
 }
