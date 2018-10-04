@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
+
 
 let NavBar = (props)=>{
     let titleAnimation = {
@@ -29,6 +31,7 @@ let NavBar = (props)=>{
                 <div className="contact navBar" style={props.isHome ? navBarAnimation(17) : {}}>Contact</div>
                 <div className="title" style={props.isHome ? titleAnimation : {}}>Metrova</div>
             </div>
+             <Cart />
         </div>
     )
 }

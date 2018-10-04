@@ -5,16 +5,24 @@ import jaegerDigital from "../watchList/jaeger/jaegerDigital";
 import milleAnalog from "../watchList/mille/milleAnalog";
 import milleDigital from "../watchList/mille/milleDigital";
 import "../css/WatchDetails.css";
+import { connect } from "react-redux";
+import { addItem } from "../redux/actions";
 
+const mapDispatchToProps = dispatch => {
+    return {
+        addItem: item => dispatch(addItem(item))
+    };
+};
 
-let WatchDetails = (props)=>{
+let watch = (props)=>{
+    console.log(props)
+    const { name, addItem} = props;
    let details = {};
     
     let getItem = (brand)=>{
         brand.items.forEach(watch => {
-            if (props.name === watch.name) {
+            if (name === watch.name) {
                 details = { ...watch }
-                console.log(details)
             }
         });
     }
@@ -23,6 +31,10 @@ let WatchDetails = (props)=>{
     getItem(jaegerDigital);
     getItem(milleAnalog);
     getItem(milleDigital);
+
+    let addToCart = ()=>{
+        addItem(details);
+    };
    
     return(
         <div>
@@ -45,12 +57,14 @@ let WatchDetails = (props)=>{
                  </ul>
                  <br/>
                  <h3>Price:  ${details.price}</h3>
-                        <button type="button" class="btn btn-danger">Add To Cart</button>
+                        <button onClick={addToCart} type="button" className="btn btn-danger">Add To Cart</button>
                </div>
               </div>
             </div>
         </div>
     )
 }
+
+const WatchDetails = connect(null, mapDispatchToProps)(watch);
 
 export default WatchDetails;

@@ -128,4 +128,10 @@
     left: 600px;
   }
 }
+
+.cart {
+  position: absolute;
+  top: 1500px;
+  z-index: 10;
+}
 /*# sourceMappingURL=Navbar.css.map */
