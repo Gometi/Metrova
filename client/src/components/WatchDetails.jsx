@@ -7,6 +7,8 @@ import milleDigital from "../watchList/mille/milleDigital";
 import "../css/WatchDetails.css";
 import { connect } from "react-redux";
 import { addItem } from "../redux/actions";
+import { showCart } from "../redux/actions";
+import { Grid, Row, Col, Button} from 'react-bootstrap';
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -34,19 +36,20 @@ let watch = (props)=>{
 
     let addToCart = ()=>{
         addItem(details);
+        showCart(true);
     };
    
     return(
         <div>
             <NavBar/>
             <br/>
-            <div className="container">
-              <div className="row">
-               <div className="watch ">
-                   <h2 className="ml-5 pl-4">{details.name}</h2> <br/>
+            <Grid>
+              <Row>
+               <Col xs={12} sm={6} md={6} className="watch ">
+                   <h2>{details.name}</h2> <br/>
                         <img className="img-fluid" src={details.image} alt="watch" style={{maxWidth: 300, maxHeight: 400 }} />
-               </div>
-                    <div className="specifications offset-md-2">
+               </Col>
+                    <Col xs={12} sm={6} md={6} className="specifications">
                  <h2 className="ml-5 pl-5">Specifications</h2>
                  <ul className="list-group">
                             <li className="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">CASE SIZE:  <span className="ml-5">{details.case_size}</span></li>
@@ -57,10 +60,10 @@ let watch = (props)=>{
                  </ul>
                  <br/>
                  <h3>Price:  ${details.price}</h3>
-                        <button onClick={addToCart} type="button" className="btn btn-danger">Add To Cart</button>
-               </div>
-              </div>
-            </div>
+                        <Button onClick={addToCart} type="button" className="btn btn-danger">Add To Cart</Button>
+               </Col>
+              </Row>
+            </Grid>
         </div>
     )
 }

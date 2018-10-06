@@ -22,6 +22,7 @@ class cartList extends Component {
     }
 
     render(){
+        console.log('cart',this.props.cart)
         return (
             <div>
                 <Modal show={this.state.show}>
