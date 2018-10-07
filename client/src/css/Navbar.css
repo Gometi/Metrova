@@ -33,6 +33,7 @@
 
 .navBar:hover {
   color: black;
+  cursor: pointer;
 }
 
 .navBar:hover .list {
@@ -73,6 +74,17 @@
 
 .contact {
   left: 950px;
+}
+
+.cart-icon {
+  left: 1150px;
+}
+
+.item-count {
+  background-color: #050535;
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 @-webkit-keyframes move-down {

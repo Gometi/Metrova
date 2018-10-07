@@ -6,9 +6,9 @@ const initialState = {
 const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_ITEM":
-            return { ...state, items: [...state.items, action.payload] };
-            case "SHOW CART":
-            return {...state, show: action.payload};
+            return { ...state, items: [...state.items, action.payload] }
+        case "SHOW_CART": 
+        return {...state, show: action.payload}
         default:
             return state;
     }

@@ -1,60 +1,64 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from "react-redux";
 import "../css/Navbar.css";
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, Row, Col } from 'react-bootstrap';
+import { showCart } from "../redux/actions";
 
-const mapStateToProps = state =>{
-   return {cart: state.cart}
+const mapStateToProps = state => {
+    return { cart: state.cart }
+};
+
+const mapDispatchToProps = dispatch => {
+    return { showCart: value => dispatch(showCart(value)) }
 };
 
 class cartList extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-           show: false
-        }
         this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
-    handleShow(){
+    handleShow() {
         this.setState({
             show: true
         })
     }
 
-    render(){
-        console.log('cart',this.props.cart)
+    handleClose() {
+        this.props.showCart(false)
+    }
+
+    render() {
         return (
             <div>
-                <Modal show={this.state.show}>
+                <Modal show={this.props.cart.show} onHide={this.handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Modal title</Modal.Title>
+                        <Modal.Title>My Cart[{this.props.cart.items.length}]</Modal.Title>
                     </Modal.Header>
 
-                    <Modal.Body>One fine body...</Modal.Body>
+                    <Modal.Body>
+                        {this.props.cart.items.map((item, index) => (
+                            <Row className="list-group-item" key={index}>
+                                <Col md={4}><img className="img-fluid" src={item.image} alt="watch" style={{ maxWidth: 100, maxHeight: 150 }} /></Col>
+                                <Col md={8}>
+                                    <div>{item.name}</div>
+                                    <div>${item.price}</div>
+                                </Col>
+                            </Row>
+                        ))}
+                    </Modal.Body>
 
                     <Modal.Footer>
-                        <Button>Close</Button>
-                        <Button bsStyle="primary">Save changes</Button>
+                        <Button onClick={this.handleClose}>Continue Shopping</Button>
+                        <Button bsStyle="primary">Checkout</Button>
                     </Modal.Footer>
                 </Modal>
-                <div className="cart">
-                    List
-            
-                    <ul className="list-group list-group-flush">
-                        {this.props.cart.items.map((item, index) => (
-                            <li className="list-group-item" key={index}>
-                                {item.name}
-                                <img className="img-fluid" src={item.image} alt="watch" style={{ maxWidth: 300, maxHeight: 400 }} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
             </div>
         )
     }
-    
-}
-    
 
-const Cart = connect(mapStateToProps)(cartList);
+}
+
+
+const Cart = connect(mapStateToProps, mapDispatchToProps)(cartList);
 export default Cart;

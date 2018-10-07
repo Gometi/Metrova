@@ -34,6 +34,7 @@
 
 .navBar:hover{
     color: black;
+    cursor: pointer;
 }
 
 .navBar:hover .list{
@@ -77,6 +78,15 @@
 .contact{
     left: 950px;
     // animation: move-down 17s;
+}
+.cart-icon{
+    left: 1150px;
+}
+.item-count{
+    background-color: rgb(5, 5, 53);
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 @keyframes move-down {

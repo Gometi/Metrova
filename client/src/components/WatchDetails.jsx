@@ -6,19 +6,18 @@ import milleAnalog from "../watchList/mille/milleAnalog";
 import milleDigital from "../watchList/mille/milleDigital";
 import "../css/WatchDetails.css";
 import { connect } from "react-redux";
-import { addItem } from "../redux/actions";
-import { showCart } from "../redux/actions";
+import { addItem, showCart } from "../redux/actions";
 import { Grid, Row, Col, Button} from 'react-bootstrap';
 
 const mapDispatchToProps = dispatch => {
     return {
-        addItem: item => dispatch(addItem(item))
+        addItem: item => dispatch(addItem(item)),
+        showCart: value => dispatch(showCart(value))
     };
 };
 
 let watch = (props)=>{
-    console.log(props)
-    const { name, addItem} = props;
+    const { name, addItem, showCart} = props;
    let details = {};
     
     let getItem = (brand)=>{
