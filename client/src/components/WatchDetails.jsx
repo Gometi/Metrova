@@ -58,7 +58,7 @@ let watch = (props)=>{
                             <li className="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">WATER RESISTANCE:  <span className="ml-5">{details.water_resistance}</span></li>
                  </ul>
                  <br/>
-                 <h3>Price:  ${details.price}</h3>
+                 <h3>Price:  ${details.price.toFixed(2)}</h3>
                         <Button onClick={addToCart} type="button" className="btn btn-danger">Add To Cart</Button>
                </Col>
               </Row>

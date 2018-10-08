@@ -9,4 +9,8 @@ export const showCart = value => ({
 export const updateQuantity = value =>({
     type: "UPDATE_QUANTITY",
     payload: value
+});
+export const removeItem = itemIndex =>({
+    type: "REMOVE_ITEM",
+    payload: itemIndex
 })

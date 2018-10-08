@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Aclonica|Bubblegum+Sans");
+@import url("https://fonts.googleapis.com/css?family=Aladin");
+.modal-title {
+  font-family: 'Aclonica', sans-serif;
+}
+
+.item-name {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 16px;
+}
+/*# sourceMappingURL=Cart.css.map */
