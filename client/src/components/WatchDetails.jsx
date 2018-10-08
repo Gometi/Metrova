@@ -23,7 +23,7 @@ let watch = (props)=>{
     let getItem = (brand)=>{
         brand.items.forEach(watch => {
             if (name === watch.name) {
-                details = { ...watch }
+                details = { ...watch, quantity: 1 }
             }
         });
     }
