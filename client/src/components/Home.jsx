@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../css/Home.css";
 import NavBar from "./NavBar";
 import BigWatch from "./BigWatch";
+import BrandSlideShow from "./BrandSlideShow";
 import {Row, Col} from 'react-bootstrap';
 class Home extends Component {
     constructor(props) {
@@ -53,6 +54,9 @@ class Home extends Component {
                 <BigWatch/>
                 <br/>
                 <div className="line1 container-fluid"></div>
+                <div>
+                   <BrandSlideShow/>
+                </div>
             </div>
         )
     }

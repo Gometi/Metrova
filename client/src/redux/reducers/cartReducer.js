@@ -1,17 +1,5 @@
 const initialState = {
-    items: [
-        {
-            name: 'Acropolis',
-            image: require('../../images/acropolis-1st.jpg'),
-            price: 90.00,
-            case_size: '40mm',
-            case_thickness: '7mm',
-            strap_width: '20mm',
-            glass: 'HARDENED MINERAL CRYSTAL',
-            water_resistance: '3 ATM',
-            quantity: 1
-        }
-    ],
+    items: [],
     show: false
 };
 

@@ -55,6 +55,16 @@ export default {
             strap_width: '20mm',
             glass: 'GS CRYSTAL',
             water_resistance: '3 ATM'
+        },
+        {
+            name: 'Fastrack',
+            image: require('../../images/fastrack.jpeg'),
+            price: 65.55,
+            case_size: '36mm',
+            case_thickness: '6mm',
+            strap_width: '20mm',
+            glass: 'GS CRYSTAL',
+            water_resistance: '3 ATM'
         }
     ]
 }

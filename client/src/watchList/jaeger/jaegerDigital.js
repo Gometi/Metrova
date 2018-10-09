@@ -54,6 +54,16 @@ export default {
             strap_width: '20mm',
             glass: 'GS CRYSTAL',
             water_resistance: '3 ATM'
+        },
+        {
+            name: 'Sonata',
+            image: require('../../images/sonata.jpeg'),
+            price: 62.55,
+            case_size: '36mm',
+            case_thickness: '6mm',
+            strap_width: '20mm',
+            glass: 'GS CRYSTAL',
+            water_resistance: '3 ATM'
         }
     ]
 }

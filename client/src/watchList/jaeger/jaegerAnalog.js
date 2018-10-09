@@ -56,6 +56,16 @@ export default {
             strap_width: '20mm',
             glass: 'MINERAL CRYSTAL',
             water_resistance: '3 ATM'
+        },
+        {
+            name: 'Zeppelin',
+            image: require('../../images/zeppelin.jpg'),
+            price: 75.55,
+            case_size: '30mm',
+            case_thickness: '6mm',
+            strap_width: '20mm',
+            glass: 'SAPPHIRE CRYSTAL',
+            water_resistance: '3 ATM'
         }
     ]
 }

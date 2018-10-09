@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import "../css/Navbar.css";
 import "../css/Cart.css";
-import { Button, Modal, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { showCart, updateQuantity, removeItem } from "../redux/actions";
 
 const mapStateToProps = state => {
@@ -53,12 +54,10 @@ class cartList extends Component {
         });
         return (
             <div>
-                <Modal show={this.props.cart.show} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title className="modal-title">My Cart [{this.props.cart.items.length}]</Modal.Title>
-                    </Modal.Header>
+                <Modal isOpen={this.props.cart.show}>
+                        <ModalHeader toggle={this.handleClose} className="modal-title">My Cart [{this.props.cart.items.length}]</ModalHeader>
 
-                    <Modal.Body>
+                    <ModalBody>
                         {this.props.cart.items.map((item, index) => (
                             <Row className="list-group-item" key={index}>
                                 <Col md={4}><img className="img-fluid" src={item.image} alt="watch" style={{ maxWidth: 80, maxHeight: 130 }} /></Col>
@@ -76,12 +75,12 @@ class cartList extends Component {
                             <p className="text-danger">Free Shipping!</p>
                             <p>Total:   ${totalPrice.toFixed(2)}</p>
                         </div>
-                    </Modal.Body>
+                    </ModalBody>
 
-                    <Modal.Footer>
+                    <ModalFooter>
                         <Button bsStyle="primary" onClick={this.handleClose}>Continue Shopping</Button>
                         <Button bsStyle="success">Checkout</Button>
-                    </Modal.Footer>
+                    </ModalFooter>
                 </Modal>
             </div>
         )
