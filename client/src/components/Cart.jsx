@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import "../css/Navbar.css";
 import "../css/Cart.css";
-import { Row, Col } from 'react-bootstrap';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { showCart, updateQuantity, removeItem } from "../redux/actions";
 
@@ -59,27 +58,30 @@ class cartList extends Component {
 
                     <ModalBody>
                         {this.props.cart.items.map((item, index) => (
-                            <Row className="list-group-item" key={index}>
-                                <Col md={4}><img className="img-fluid" src={item.image} alt="watch" style={{ maxWidth: 80, maxHeight: 130 }} /></Col>
-                                <Col md={4}>
+                            <div className=" row" key={index}>
+                                <div><img className="col-4 img-fluid" src={item.image} alt="watch" style={{ maxWidth: 80, maxHeight: 130 }} /></div>
+                                <div className="col-6">
                                     <div className="item-name">{item.name}</div>
                                     <div>${item.price.toFixed(2)}</div>
-                                    <div><Button onClick={() => this.handleSubtract(index)}>-</Button> &nbsp; {item.quantity} &nbsp; <Button onClick={() => this.handleAdd(index)}>+</Button> &nbsp; ${(item.quantity * item.price).toFixed(2)}</div>
-                                </Col>
-                                <Col md={2}>
-                                    <Button className="btn-danger" onClick={() => this.handleRemoveItem(index)} style={{ marginLeft: 100, borderRadius: 50 }}>x</Button>
-                                </Col>
-                            </Row>
+                                    <div><Button className="bg-light text-info" onClick={() => this.handleSubtract(index)}>-</Button> &nbsp; {item.quantity} &nbsp;
+                                         <Button className="bg-light text-info" onClick={() => this.handleAdd(index)}>+</Button> &nbsp; ${(item.quantity * item.price).toFixed(2)}</div>
+                                </div>
+                                <div className="col-2">
+                                    <Button onClick={() => this.handleRemoveItem(index)} style={{ marginLeft: 50, borderRadius: 50 }}>x</Button>
+                                </div>
+                            </div>
                         ))}
                         <div>
+                            <br/>
+                            <hr/>
                             <p className="text-danger">Free Shipping!</p>
                             <p>Total:   ${totalPrice.toFixed(2)}</p>
                         </div>
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button bsStyle="primary" onClick={this.handleClose}>Continue Shopping</Button>
-                        <Button bsStyle="success">Checkout</Button>
+                        <Button className="bg-primary" onClick={this.handleClose}>Continue Shopping</Button>
+                        <Button className="bg-success">Checkout</Button>
                     </ModalFooter>
                 </Modal>
             </div>

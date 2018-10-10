@@ -4,6 +4,8 @@ import NavBar from "./NavBar";
 import BigWatch from "./BigWatch";
 import BrandSlideShow from "./BrandSlideShow";
 import {Row, Col} from 'react-bootstrap';
+import {jaeger, mille} from '../brand/Brand';
+import Footer from "./Footer";
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -34,7 +36,11 @@ class Home extends Component {
     }
 
     render() {
-
+        const url = require("../images/silver-glitter-background.jpeg");
+        const style = {
+            backgroundImage: `url(${url})`,
+            backgroundSize: 'contain'
+        }
         return (
             <div className="container-fluid">
             <NavBar isHome = {true}/>
@@ -54,9 +60,13 @@ class Home extends Component {
                 <BigWatch/>
                 <br/>
                 <div className="line1 container-fluid"></div>
-                <div>
-                   <BrandSlideShow/>
+                <div className="container-fluid" style={style}>
+                <div className="row justify-content-center">
+                  <BrandSlideShow  brand={jaeger}/>
+                  <BrandSlideShow  brand={mille}/>
                 </div>
+                </div>
+                <Footer/>
             </div>
         )
     }

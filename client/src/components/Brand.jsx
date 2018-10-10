@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import NavBar from "./NavBar";
 import "../css/Brand.css";
 import { Link } from 'react-router-dom';
-import {Grid, Row, Col } from 'react-bootstrap';
 import { Card, CardImg, CardBody, CardTitle, CardText} from "reactstrap";
+import Footer from "./Footer";
 class Brand extends Component{
     render(){
         let link = "/watch_details/"
@@ -39,7 +39,8 @@ class Brand extends Component{
                             }
 
                         </div>
-                    </div>                
+                    </div>  
+                    <Footer/>              
             </div>
         )
     }

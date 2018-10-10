@@ -8,6 +8,7 @@ import "../css/WatchDetails.css";
 import { connect } from "react-redux";
 import { addItem, showCart } from "../redux/actions";
 import { Button} from 'reactstrap';
+import Footer from "./Footer";
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -64,6 +65,7 @@ let watch = (props)=>{
                </div>
               </div>
             </div>
+            <Footer/>
         </div>
     )
 }
