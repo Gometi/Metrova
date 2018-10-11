@@ -45,8 +45,8 @@ let watch = (props)=>{
             <br/>
             <div className="container">
               <div className="row">
-               <div className="watch col-lg-6 d-md-flex justify-content-md-center justify-content-lg-start ">
-                   <h2 className="text-right">{details.name}</h2>
+               <div className="watch col-lg-6 d-md-flex justify-content-sm-center justify-content-lg-start ">
+                   <h2 className="text-sm-center">{details.name}</h2>
                     <br/>
                         <img className="img-fluid" src={details.image} alt="watch" style={{maxWidth: 300, maxHeight: 400 }} />
                </div>

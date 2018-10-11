@@ -121,5 +121,9 @@
     top: 1500px;
     z-index: 10;
 }
-
+@media screen and (max-width:660px){
+    .navigation{
+        display: none;
+    }
+}
 

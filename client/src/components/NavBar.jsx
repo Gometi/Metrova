@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Cart from "./Cart";
 import { connect } from "react-redux";
 import { showCart } from "../redux/actions";
+import Hamburger from "./Hamburger";
+
 
 const mapStateToProps = state => {
     return { cart: state.cart }
@@ -49,6 +51,7 @@ let navigation = (props)=>{
                 <div className="cart-icon navBar" onClick={displayCart}><img src={require('../images/shopping-cart-icon.png')} style={{ width: 40, height: 40 }} alt="cart-icon" />Cart <span className={cart.items.length > 0 ? "item-count" : ""}>{cart.items.length > 0 ? cart.items.length : ""}</span></div>
                 <div className="title" style={props.isHome ? titleAnimation : {}}>Metrova</div>
             </div>
+            <Hamburger/>           
              <Cart />
         </div>
     )

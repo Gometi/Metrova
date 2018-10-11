@@ -15,8 +15,7 @@ class Home extends Component {
         //       },
         //       width: window.innerWidth
         //    }
-
-
+       
     }
 
     componentDidMount() {

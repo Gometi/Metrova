@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Aclonica|Bubblegum+Sans");
+@import url("https://fonts.googleapis.com/css?family=Aladin");
+.navigation1 {
+  width: 500px;
+  color: white;
+  display: none;
+}
+
+.title1 {
+  font-family: 'Aladin', cursive;
+  font-size: 25px;
+  color: black;
+}
+
+.nav-links {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 25px;
+  background: black;
+  position: absolute;
+  width: 480px;
+  z-index: 5;
+  -webkit-transform: translate(-500px, 0);
+          transform: translate(-500px, 0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #c0bdbd;
+}
+
+a {
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.brand-name {
+  font-size: 20px;
+  border-left: .02px solid white;
+  padding-left: 8px;
+  margin-bottom: 4px;
+  margin-left: 10px;
+}
+
+.cart-icon:hover {
+  color: #c0bdbd;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 660px) {
+  .navigation1 {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Hamburger.css.map */
