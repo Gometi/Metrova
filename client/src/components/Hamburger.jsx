@@ -36,24 +36,31 @@ class Navigation extends Component {
         return (
             <div>
                 <div className="navigation1">
-                    <div className="title1 text-center">Metrova</div>
+                    <div>
+                    <span className="title1 float-right">Metrova</span>
                     <button className={this.state.isActive ? "hamburger  hamburger--spin is-active" : "hamburger hamburger--spin"} onClick={this.openNavigation} type="button">
                         <span className="hamburger-box">
                             <span className="hamburger-inner"></span>
                         </span>
                     </button>
+                    </div>
                     <ul className="nav-links" style={this.state.isActive ? { transform: 'none' } : {}}>
                         <div className="home1"><Link to="/" >Home</Link></div>
+                        <hr/>
                         <li className=" ">Analog
                     <div className="brand-name"><Link to="/brand/jaeger-alpha-analog" className=" ">Jaeger Alpha</Link></div>
                             <div className="brand-name"><Link to="/brand/mille-deluxe-analog" className=" ">Mille Deluxe</Link></div>
                         </li>
+                        <hr/>
                         <li className="digital " >Digital
                     <div className="brand-name"><Link to="/brand/jaeger-alpha-digital" className=" ">Jaeger Alpha</Link></div>
                             <div className="brand-name"><Link to="/brand/mille-deluxe-digital" className=" ">Mille Deluxe</Link></div>
                         </li>
+                        <hr/>
                         <li className="about " >About</li>
+                        <hr/>
                         <li className="contact ">Contact</li>
+                        <hr/>
                         <li className="cart-icon " onClick={this.displayCart}><img src={require('../images/shopping-cart-icon.png')} style={{ width: 40, height: 40 }} alt="cart-icon" />Cart <span className={this.props.cart.items.length > 0 ? "item-count" : ""}>{this.props.cart.items.length > 0 ? this.props.cart.items.length : ""}</span></li>
 
                     </ul>

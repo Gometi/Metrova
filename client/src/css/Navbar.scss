@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Aclonica|Bubblegum+Sans");
 @import url("https://fonts.googleapis.com/css?family=Aladin");
 
+$navigation-left-position:0px;
+$screen-width: 1500px;
 .navigation{
     height: 180px;  
     background: rgb(184, 184, 184);
+    position: relative;
+    width: 1550px;
+    left: $navigation-left-position;
 }
 
 .links{
@@ -18,7 +23,7 @@
 .title{
     position: absolute;
     top: 0px;
-    left: 600px;
+    left: 700px;
     font-size: 50px;
     font-family: 'Aladin', cursive;
     // animation: title-animation 10s linear;
@@ -54,9 +59,10 @@
     background: rgba(0, 0, 0, .9);
     color: white;
 }
+$left-position: 200px;
 
 .home{
-    left: 150px; 
+    left: $left-position; 
     // animation: move-down 5s;
 }
 .home:hover{
@@ -64,23 +70,23 @@
 }
 
 .analog{
-    left: 350px;
+    left: $left-position + 200;
     // animation: move-down 8s;
 }
 .digital{
-    left: 550px;
+    left: $left-position + 400;
     // animation: move-down 11s;
 }
 .about{
-    left: 750px;
+    left: $left-position + 600;
     // animation: move-down 14s;
 }
 .contact{
-    left: 950px;
+    left: $left-position + 800;
     // animation: move-down 17s;
 }
 .cart-icon{
-    left: 1150px;
+    left: $left-position + 1000;
 }
 .item-count{
     background-color: rgb(5, 5, 53);
@@ -104,15 +110,15 @@
        left: -150px
     }
     70%{
-        left: 1100px;
+        left: 1320px;
         top: 100px;
     }
     80%{
-        left: 1100px;
+        left: 1320px;
         top: 0px;
     }
     100%{
-       left:  600px;
+       left:  700px;
     }
 }
 
@@ -121,9 +127,58 @@
     top: 1500px;
     z-index: 10;
 }
-@media screen and (max-width:660px){
+@media screen and (max-width:850px){
     .navigation{
         display: none;
     }
 }
+
+@media screen and (max-width:$screen-width - 100){
+    .navigation{
+      left: $navigation-left-position - 100;
+    }
+}
+@media screen and (max-width:$screen-width - 200){
+    .navigation{
+      left: $navigation-left-position - 200;
+    }
+  
+}
+
+$left-position2: 300px;
+
+@media screen and (max-width:$screen-width - 300){
+    .navigation{
+      left:  $navigation-left-position - 200;
+    }
+    .home{
+       left: $left-position2;
+    }
+    .analog{
+        left: $left-position2 + 120;
+    }
+    .digital{
+        left: $left-position2 + 260;
+    }
+    .about{
+        left: $left-position2 + 390;
+    }
+    .contact{
+        left: $left-position2 + 510;
+    }
+    .cart-icon{
+        left: $left-position2 + 660;
+    }
+}
+@media screen and (max-width:$screen-width - 400){
+    .navigation{
+      left: $navigation-left-position - 300;
+    }
+}
+// @media screen and (max-width:$screen-width - 500){
+//     .navigation{
+//       left: $left-position - 500;
+//     }
+// }
+
 

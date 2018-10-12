@@ -14,7 +14,7 @@
 .nav-links{
     font-family: 'Aclonica', sans-serif;
     font-size: 25px;
-    background: black;
+    background: rgb(25, 25, 37);
     position: absolute;
     width: 480px;
     z-index: 5;
@@ -45,8 +45,11 @@ li{
 color: rgb(192, 189, 189);
 cursor: pointer;
 }
+hr{
+    border: 1px solid black;
+}
 
-@media screen and (max-width:660px){
+@media screen and (max-width:850px){
     .navigation1{
         display: block;
     }
