@@ -43,12 +43,12 @@ let watch = (props)=>{
         <div>
             <NavBar/>
             <br/>
+            <br/>
             <div className="container">
-              <div className="row">
-               <div className="watch col-lg-6 d-md-flex justify-content-sm-center justify-content-lg-start ">
-                   <h2 className="text-sm-center">{details.name}</h2>
-                    <br/>
-                        <img className="img-fluid" src={details.image} alt="watch" style={{maxWidth: 300, maxHeight: 400 }} />
+              <div className="row justify-content-center">
+               <div className="watch col-lg-6 col-sm-12">
+                   <h2 className="text-center">{details.name}</h2>
+                        <img className="img-fluid float-sm-right float-xl-none " src={details.image} alt="watch" style={{maxWidth: 300, maxHeight: 400 }} />
                </div>
                     <div className="specifications col-lg-6">
                  <h2 className="text-center">Specifications</h2>

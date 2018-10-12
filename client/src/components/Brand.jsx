@@ -11,6 +11,7 @@ class Brand extends Component{
             <div>
                 <NavBar/>
                 <br/>
+                <br/>
                 <div className="container">
                     <div className="row ">
                         <div className="col-lg-6 brand-statement">

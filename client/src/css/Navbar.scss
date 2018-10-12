@@ -5,7 +5,7 @@ $navigation-left-position:0px;
 $screen-width: 1500px;
 .navigation{
     height: 180px;  
-    background: rgb(184, 184, 184);
+    // background: rgb(184, 184, 184);
     position: relative;
     left: $navigation-left-position;
 }
@@ -173,23 +173,32 @@ $left-position2: 300px;
         left: $left-position2 + 660;
     }
 }
-@media screen and (max-width:$screen-width - 400){
+@media screen and (max-width:$screen-width - 550){
     .navigation{
-      left: $navigation-left-position - 200;
-      width: $screen-width - 237;
+      left: $navigation-left-position - 270;
+      width: $screen-width - 22;
     }
 }
-
 @media screen and (max-width:$screen-width - 500){
     .navigation{
       left: $navigation-left-position - 250;
       width: $screen-width - 322;
     }
 }
-@media screen and (max-width:$screen-width - 550){
+@media screen and (max-width:$screen-width - 400){
     .navigation{
-      left: $navigation-left-position - 270;
+      left: $navigation-left-position - 200;
+      width: $screen-width - 237;
     }
 }
+@media screen and (max-width:$screen-width - 300){
+    .navigation{
+      left: $navigation-left-position - 200;
+      width: $screen-width - 220;
+    }
+}
+
+
+
 
 

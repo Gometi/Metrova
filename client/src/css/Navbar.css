@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Aladin");
 .navigation {
   height: 180px;
-  background: #b8b8b8;
   position: relative;
   left: 0px;
 }
@@ -194,10 +193,10 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 950px) {
   .navigation {
-    left: -200px;
-    width: 1263px;
+    left: -270px;
+    width: 1478px;
   }
 }
 
@@ -208,9 +207,17 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1100px) {
   .navigation {
-    left: -270px;
+    left: -200px;
+    width: 1263px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation {
+    left: -200px;
+    width: 1280px;
   }
 }
 /*# sourceMappingURL=Navbar.css.map */

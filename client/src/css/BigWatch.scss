@@ -127,5 +127,26 @@
     left: 503px;
     transform: rotate(90deg);
 }
+@media screen and (max-width: 1300px){
+    .watch{
+        position: relative;
+        margin-left: -120px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .watch{
+        position: relative;
+        margin-left: -100px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .watch{
+        position: relative;
+        margin-left: -200px;
+    }
+}
+
+
 
 

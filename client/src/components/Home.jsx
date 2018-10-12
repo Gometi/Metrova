@@ -6,33 +6,7 @@ import BrandSlideShow from "./BrandSlideShow";
 import {jaeger, mille} from '../brand/Brand';
 import Footer from "./Footer";
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        //    this.state = {
-        //       title: {
-        //           left: 0
-        //       },
-        //       width: window.innerWidth
-        //    }
-       
-    }
-
-    componentDidMount() {
-
-        // let move = setInterval(()=>{
-        //     this.setState({
-        //         title: {
-        //             left: this.state.title.left + 1
-        //         }
-        //     })
-        //     if(this.state.title.left === this.state.width -70){
-        //         clearInterval(move);
-        //     }
-        // }, 10)
-
-
-    }
-
+   
     render() {
         const url = require("../images/silver-glitter-background.jpeg");
         const style = {

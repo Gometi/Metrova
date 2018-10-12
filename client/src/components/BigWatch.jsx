@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../css/BigWatch.css";
-import {Grid, Row, Col} from "react-bootstrap";
 
 class BigWatch extends Component{
     constructor(){
@@ -11,6 +10,7 @@ class BigWatch extends Component{
             rotateHourHand: 0
         }
     }
+    
     componentDidMount(){
 
         setInterval(() => {
@@ -34,10 +34,10 @@ class BigWatch extends Component{
     }
     render(){
         return(
-            <Grid bsClass="container-fluid">
-                <Row className="big-watch-container">
-                    <Col sm={12} md={4} className='text'>Discover Our Collection Made By The Most Experienced Watchmakers</Col>
-                    <Col sm={12} md={8}>
+            <div className="container-fluid">
+                <div className="big-watch-container row">
+                    <div  className='text col-lg-4'>Discover Our Collection Made By The Most Experienced Watchmakers</div>
+                    <div  className="watch float-lg-left col-lg-8">
                     <div className="big-watch">
                             <img src={require('../images/ModernSport05.jpg')} alt="watch" />
                             <div className="center"></div>
@@ -59,10 +59,10 @@ class BigWatch extends Component{
                             <div className="hourHand" style={{ transform: 'rotate(' + this.state.rotateHourHand + 'deg)' }}></div>
                     </div>
                         
-                    </Col>
+                    </div>
                    
-                </Row>
-            </Grid>
+                </div>
+            </div>
         )
     }
 }
