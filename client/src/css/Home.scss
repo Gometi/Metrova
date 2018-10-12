@@ -17,7 +17,7 @@
         transform: scale(1.5);
     }
     100%{
-        left: 800px;
+        left: 720px;
     }
 }
 
@@ -32,9 +32,8 @@
     img{
          position: absolute;
          top: 50px;
-         left: -700px;
+         left: -800px;
          height: 200px;
-          @extend %slideShow-animation;
     }
 }
  .watch1{
@@ -53,5 +52,72 @@
     .line1{
         border: 2px solid black;
         height: 7px;
+    }
+
+    @media screen and (max-width:991px){
+        .slideShow{
+            display: none;
+        }
+    }
+
+    $screen-width: 1528px;
+    $left-position: 720px;
+    @mixin animate($left) {
+         @keyframes image_animation{
+    0%{
+        display: block;
+        left: 0px;
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        left: $left;
+    }
+}
+    }
+    @media screen and (max-width:$screen-width - 50){
+     @include animate($left-position)
+    }
+    @media screen and (max-width:$screen-width - 100){
+     @include animate($left-position - 50)
+    }
+    @media screen and (max-width:$screen-width - 150){
+     @include animate($left-position - 100);
+      .slideShow{
+         img{
+             animation-duration: 9s;
+         }
+     }
+    }
+    @media screen and (max-width:$screen-width - 200){
+     @include animate($left-position - 150);
+      .slideShow{
+         img{
+             animation-duration: 9.3s;
+         }
+     }
+    }
+    @media screen and (max-width:$screen-width - 250){
+     @include animate($left-position - 200);
+      .slideShow{
+         img{
+             animation-duration: 9.5s;
+         }
+     }
+    }
+    // @media screen and (max-width:$screen-width - 300){
+    //  @include animate($left-position - 250)
+    // }
+    // @media screen and (max-width:$screen-width - 350){
+    //  @include animate($left-position - 250)
+    // }
+    @media screen and (max-width:$screen-width - 400){
+     @include animate($left-position - 250);
+     .slideShow{
+         img{
+             animation-duration: 9.5s;
+         }
+     }
     }
     

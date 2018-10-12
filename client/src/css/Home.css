@@ -20,7 +20,7 @@
             transform: scale(1.5);
   }
   100% {
-    left: 800px;
+    left: 720px;
   }
 }
 
@@ -34,11 +34,11 @@
             transform: scale(1.5);
   }
   100% {
-    left: 800px;
+    left: 720px;
   }
 }
 
-.slideShow img, .watch1, .watch2, .watch3 {
+.watch1, .watch2, .watch3 {
   -webkit-animation-name: image_animation;
           animation-name: image_animation;
   -webkit-animation-duration: 8s;
@@ -54,7 +54,7 @@
 .slideShow img {
   position: absolute;
   top: 50px;
-  left: -700px;
+  left: -800px;
   height: 200px;
 }
 
@@ -73,5 +73,201 @@
 .line1 {
   border: 2px solid black;
   height: 7px;
+}
+
+@media screen and (max-width: 991px) {
+  .slideShow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1478px) {
+  @-webkit-keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 720px;
+    }
+  }
+  @keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 720px;
+    }
+  }
+}
+
+@media screen and (max-width: 1428px) {
+  @-webkit-keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 670px;
+    }
+  }
+  @keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 670px;
+    }
+  }
+}
+
+@media screen and (max-width: 1378px) {
+  @-webkit-keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 620px;
+    }
+  }
+  @keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 620px;
+    }
+  }
+  .slideShow img {
+    -webkit-animation-duration: 9s;
+            animation-duration: 9s;
+  }
+}
+
+@media screen and (max-width: 1328px) {
+  @-webkit-keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 570px;
+    }
+  }
+  @keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 570px;
+    }
+  }
+  .slideShow img {
+    -webkit-animation-duration: 9.3s;
+            animation-duration: 9.3s;
+  }
+}
+
+@media screen and (max-width: 1278px) {
+  @-webkit-keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 520px;
+    }
+  }
+  @keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 520px;
+    }
+  }
+  .slideShow img {
+    -webkit-animation-duration: 9.5s;
+            animation-duration: 9.5s;
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  @-webkit-keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 470px;
+    }
+  }
+  @keyframes image_animation {
+    0% {
+      display: block;
+      left: 0px;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      left: 470px;
+    }
+  }
+  .slideShow img {
+    -webkit-animation-duration: 9.5s;
+            animation-duration: 9.5s;
+  }
 }
 /*# sourceMappingURL=Home.css.map */

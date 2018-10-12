@@ -7,7 +7,6 @@ $screen-width: 1500px;
     height: 180px;  
     background: rgb(184, 184, 184);
     position: relative;
-    width: 1550px;
     left: $navigation-left-position;
 }
 
@@ -133,14 +132,17 @@ $left-position: 200px;
     }
 }
 
+
 @media screen and (max-width:$screen-width - 100){
     .navigation{
       left: $navigation-left-position - 100;
+      width: $screen-width - 35;
     }
 }
 @media screen and (max-width:$screen-width - 200){
     .navigation{
       left: $navigation-left-position - 200;
+      width: $screen-width - 40;
     }
   
 }
@@ -150,6 +152,7 @@ $left-position2: 300px;
 @media screen and (max-width:$screen-width - 300){
     .navigation{
       left:  $navigation-left-position - 200;
+      width: $screen-width - 147;
     }
     .home{
        left: $left-position2;
@@ -172,13 +175,21 @@ $left-position2: 300px;
 }
 @media screen and (max-width:$screen-width - 400){
     .navigation{
-      left: $navigation-left-position - 300;
+      left: $navigation-left-position - 200;
+      width: $screen-width - 237;
     }
 }
-// @media screen and (max-width:$screen-width - 500){
-//     .navigation{
-//       left: $left-position - 500;
-//     }
-// }
+
+@media screen and (max-width:$screen-width - 500){
+    .navigation{
+      left: $navigation-left-position - 250;
+      width: $screen-width - 322;
+    }
+}
+@media screen and (max-width:$screen-width - 550){
+    .navigation{
+      left: $navigation-left-position - 270;
+    }
+}
 
 

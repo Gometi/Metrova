@@ -3,7 +3,6 @@ import "../css/Home.css";
 import NavBar from "./NavBar";
 import BigWatch from "./BigWatch";
 import BrandSlideShow from "./BrandSlideShow";
-import {Row, Col} from 'react-bootstrap';
 import {jaeger, mille} from '../brand/Brand';
 import Footer from "./Footer";
 class Home extends Component {
@@ -43,17 +42,18 @@ class Home extends Component {
         return (
             <div className="container-fluid">
             <NavBar isHome = {true}/>
-                <Row className="brand-statement-container">
-                    <Col md={4} className="brand-statement">The Ultimate symbol of style and sophistication, our collection of mens's designer watch
+                <div className="brand-statement-container row">
+                    <div className="brand-statement col-lg-5 col-md-12">The Ultimate symbol of style and sophistication, our divlection of mens's designer watch
                       brands have been chosen to showcase innovative design, cutting edge technology and the latest on-trend materials.
-                    </Col>
-                    <Col md={8} className="slideShow">
+                    </div>
+                    <div className="slideShow col-lg-7">
                         <img className="watch1" src={require("../images/seamaster.png")} alt="watch" />
                         <img className="watch2" src={require("../images/SewIz.png")} alt="watch" />
                         <img className="watch3" src={require("../images/nixon1.png")} alt="watch" />
                        
-                    </Col>
-                </Row>
+                    </div>
+                </div>
+                <br/>
                 <div className="line1 container-fluid"></div>
                 <br/>
                 <BigWatch/>
