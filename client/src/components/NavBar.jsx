@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => {
 
 let navigation = (props)=>{
     let titleAnimation = {
-        animation: 'title-animation 7s linear'
+        animationName: 'title-animation'
     }
    
     let navBarAnimation = (time)=>{

@@ -4,6 +4,7 @@ import "../css/Navbar.css";
 import "../css/Cart.css";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { showCart, updateQuantity, removeItem } from "../redux/actions";
+import { Link } from 'react-router-dom';
 
 const mapStateToProps = state => {
     return { cart: state.cart }
@@ -25,6 +26,7 @@ class cartList extends Component {
         this.handleAdd = this.handleAdd.bind(this);
         this.handleSubtract = this.handleSubtract.bind(this);
         this.handleRemoveItem = this.handleRemoveItem.bind(this);
+        this.checkout = this.checkout.bind(this);
     }
     handleShow() {
         this.setState({
@@ -44,6 +46,16 @@ class cartList extends Component {
     }
     handleRemoveItem(itemIndex) {
         this.props.removeItem(itemIndex);
+    }
+    checkout(){
+        this.handleClose();
+        if (this.props.cart.items.length > 0){
+            this.props.cart.items.map(() => {
+                this.handleRemoveItem(0);
+                return null;
+            })
+        }
+       
     }
 
     render() {
@@ -81,7 +93,7 @@ class cartList extends Component {
 
                     <ModalFooter>
                         <Button className="bg-primary" onClick={this.handleClose}>Continue Shopping</Button>
-                        <Button className="bg-success">Checkout</Button>
+                        <Link to={this.props.cart.items.length > 0? "/checkout" : "#"}><Button onClick={this.checkout} className="bg-success">Checkout</Button></Link>
                     </ModalFooter>
                 </Modal>
             </div>

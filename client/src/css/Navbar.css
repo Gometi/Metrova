@@ -21,6 +21,10 @@
   left: 700px;
   font-size: 50px;
   font-family: 'Aladin', cursive;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .navBar {
@@ -169,6 +173,44 @@
 }
 
 @media screen and (max-width: 1200px) {
+  @-webkit-keyframes title-animation {
+    0% {
+      top: 100px;
+      left: -150px;
+    }
+    70% {
+      left: 1070px;
+      top: 100px;
+    }
+    80% {
+      left: 1070px;
+      top: 0px;
+    }
+    100% {
+      left: 700px;
+    }
+  }
+  @keyframes title-animation {
+    0% {
+      top: 100px;
+      left: -150px;
+    }
+    70% {
+      left: 1070px;
+      top: 100px;
+    }
+    80% {
+      left: 1070px;
+      top: 0px;
+    }
+    100% {
+      left: 700px;
+    }
+  }
+  .title {
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+  }
   .navigation {
     left: -200px;
     width: 1353px;
@@ -193,10 +235,10 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1100px) {
   .navigation {
-    left: -270px;
-    width: 1478px;
+    left: -200px;
+    width: 1263px;
   }
 }
 
@@ -207,17 +249,10 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 950px) {
   .navigation {
-    left: -200px;
-    width: 1263px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .navigation {
-    left: -200px;
-    width: 1280px;
+    left: -270px;
+    width: 1478px;
   }
 }
 /*# sourceMappingURL=Navbar.css.map */

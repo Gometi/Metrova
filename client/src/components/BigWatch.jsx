@@ -13,7 +13,7 @@ class BigWatch extends Component{
     
     componentDidMount(){
 
-        setInterval(() => {
+       this.interval = setInterval(() => {
             let time = new Date();
             let hours = time.getHours();
             let mins = time.getMinutes();
@@ -32,6 +32,11 @@ class BigWatch extends Component{
         }, 1000);
 
     }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+    
     render(){
         return(
             <div className="container-fluid">

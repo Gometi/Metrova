@@ -8,6 +8,7 @@ import jaegerDigital from './watchList/jaeger/jaegerDigital';
 import milleAnalog from './watchList/mille/milleAnalog';
 import milleDigital from './watchList/mille/milleDigital';
 import WatchDetails from './components/WatchDetails';
+import Checkout from "./components/Checkout";
 class App extends Component {
   render() {
     return (
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path="/brand/jaeger-alpha-digital" component={() => (<Brand brand={jaegerDigital} />)} />
           <Route path="/brand/mille-deluxe-analog" component={() => (<Brand brand={milleAnalog} />)} />
           <Route path="/brand/mille-deluxe-digital" component={() => (<Brand brand={milleDigital} />)} />
+          <Route path="/checkout" component={Checkout} />
           <Route exact path="/" component={Home} />
         </Switch>
       </div>

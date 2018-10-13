@@ -25,6 +25,8 @@ $screen-width: 1500px;
     left: 700px;
     font-size: 50px;
     font-family: 'Aladin', cursive;
+     animation-duration: 7s;
+     animation-timing-function: linear;
     // animation: title-animation 10s linear;
 }
 .navBar{
@@ -132,6 +134,26 @@ $left-position: 200px;
     }
 }
 
+@mixin animate($left) {
+    @keyframes title-animation{
+    0%{
+        top: 100px;
+       left: -150px
+    }
+    70%{
+        left: $left;
+        top: 100px;
+    }
+    80%{
+        left: $left;
+        top: 0px;
+    }
+    100%{
+       left:  700px;
+    }
+}
+}
+
 
 @media screen and (max-width:$screen-width - 100){
     .navigation{
@@ -148,8 +170,12 @@ $left-position: 200px;
 }
 
 $left-position2: 300px;
-
+$left1: 1320px;
 @media screen and (max-width:$screen-width - 300){
+    @include animate($left1 - 250);
+    .title{
+         animation-duration: 6s;
+    }
     .navigation{
       left:  $navigation-left-position - 200;
       width: $screen-width - 147;
@@ -173,10 +199,10 @@ $left-position2: 300px;
         left: $left-position2 + 660;
     }
 }
-@media screen and (max-width:$screen-width - 550){
+@media screen and (max-width:$screen-width - 400){
     .navigation{
-      left: $navigation-left-position - 270;
-      width: $screen-width - 22;
+      left: $navigation-left-position - 200;
+      width: $screen-width - 237;
     }
 }
 @media screen and (max-width:$screen-width - 500){
@@ -185,18 +211,20 @@ $left-position2: 300px;
       width: $screen-width - 322;
     }
 }
-@media screen and (max-width:$screen-width - 400){
+@media screen and (max-width:$screen-width - 550){
     .navigation{
-      left: $navigation-left-position - 200;
-      width: $screen-width - 237;
+      left: $navigation-left-position - 270;
+      width: $screen-width - 22;
     }
 }
-@media screen and (max-width:$screen-width - 300){
-    .navigation{
-      left: $navigation-left-position - 200;
-      width: $screen-width - 220;
-    }
-}
+
+
+// @media screen and (max-width:$screen-width - 300){
+//     .navigation{
+//       left: $navigation-left-position - 200;
+//       width: $screen-width - 220;
+//     }
+// }
 
 
 
