@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Aclonica|Bubblegum+Sans");
 @import url("https://fonts.googleapis.com/css?family=Aladin");
 
+$navigation-left-position:0px;
+$screen-width: 1500px;
 .navigation{
     height: 180px;  
-    background: rgb(184, 184, 184);
+    // background: rgb(184, 184, 184);
+    position: relative;
+    left: $navigation-left-position;
 }
 
 .links{
@@ -18,9 +22,11 @@
 .title{
     position: absolute;
     top: 0px;
-    left: 600px;
+    left: 700px;
     font-size: 50px;
     font-family: 'Aladin', cursive;
+     animation-duration: 7s;
+     animation-timing-function: linear;
     // animation: title-animation 10s linear;
 }
 .navBar{
@@ -34,6 +40,7 @@
 
 .navBar:hover{
     color: black;
+    cursor: pointer;
 }
 
 .navBar:hover .list{
@@ -53,9 +60,10 @@
     background: rgba(0, 0, 0, .9);
     color: white;
 }
+$left-position: 200px;
 
 .home{
-    left: 150px; 
+    left: $left-position; 
     // animation: move-down 5s;
 }
 .home:hover{
@@ -63,20 +71,29 @@
 }
 
 .analog{
-    left: 350px;
+    left: $left-position + 200;
     // animation: move-down 8s;
 }
 .digital{
-    left: 550px;
+    left: $left-position + 400;
     // animation: move-down 11s;
 }
 .about{
-    left: 750px;
+    left: $left-position + 600;
     // animation: move-down 14s;
 }
 .contact{
-    left: 950px;
+    left: $left-position + 800;
     // animation: move-down 17s;
+}
+.cart-icon{
+    left: $left-position + 1000;
+}
+.item-count{
+    background-color: rgb(5, 5, 53);
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 @keyframes move-down {
@@ -94,16 +111,122 @@
        left: -150px
     }
     70%{
-        left: 1100px;
+        left: 1320px;
         top: 100px;
     }
     80%{
-        left: 1100px;
+        left: 1320px;
         top: 0px;
     }
     100%{
-       left:  600px;
+       left:  700px;
     }
 }
+
+.cart{
+    position: absolute;
+    top: 1500px;
+    z-index: 10;
+}
+@media screen and (max-width:850px){
+    .navigation{
+        display: none;
+    }
+}
+
+@mixin animate($left) {
+    @keyframes title-animation{
+    0%{
+        top: 100px;
+       left: -150px
+    }
+    70%{
+        left: $left;
+        top: 100px;
+    }
+    80%{
+        left: $left;
+        top: 0px;
+    }
+    100%{
+       left:  700px;
+    }
+}
+}
+
+
+@media screen and (max-width:$screen-width - 100){
+    .navigation{
+      left: $navigation-left-position - 100;
+      width: $screen-width - 35;
+    }
+}
+@media screen and (max-width:$screen-width - 200){
+    .navigation{
+      left: $navigation-left-position - 200;
+      width: $screen-width - 40;
+    }
+  
+}
+
+$left-position2: 300px;
+$left1: 1320px;
+@media screen and (max-width:$screen-width - 300){
+    @include animate($left1 - 250);
+    .title{
+         animation-duration: 6s;
+    }
+    .navigation{
+      left:  $navigation-left-position - 200;
+      width: $screen-width - 147;
+    }
+    .home{
+       left: $left-position2;
+    }
+    .analog{
+        left: $left-position2 + 120;
+    }
+    .digital{
+        left: $left-position2 + 260;
+    }
+    .about{
+        left: $left-position2 + 390;
+    }
+    .contact{
+        left: $left-position2 + 510;
+    }
+    .cart-icon{
+        left: $left-position2 + 660;
+    }
+}
+@media screen and (max-width:$screen-width - 400){
+    .navigation{
+      left: $navigation-left-position - 200;
+      width: $screen-width - 237;
+    }
+}
+@media screen and (max-width:$screen-width - 500){
+    .navigation{
+      left: $navigation-left-position - 250;
+      width: $screen-width - 322;
+    }
+}
+@media screen and (max-width:$screen-width - 550){
+    .navigation{
+      left: $navigation-left-position - 270;
+      width: $screen-width - 22;
+    }
+}
+
+
+// @media screen and (max-width:$screen-width - 300){
+//     .navigation{
+//       left: $navigation-left-position - 200;
+//       width: $screen-width - 220;
+//     }
+// }
+
+
+
 
 

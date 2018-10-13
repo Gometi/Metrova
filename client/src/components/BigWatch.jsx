@@ -10,9 +10,10 @@ class BigWatch extends Component{
             rotateHourHand: 0
         }
     }
+    
     componentDidMount(){
 
-        setInterval(() => {
+       this.interval = setInterval(() => {
             let time = new Date();
             let hours = time.getHours();
             let mins = time.getMinutes();
@@ -31,12 +32,17 @@ class BigWatch extends Component{
         }, 1000);
 
     }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+    
     render(){
         return(
             <div className="container-fluid">
                 <div className="big-watch-container row">
-                    <div className='text col-4'>Discover Our Collection Made By The Most Experienced Watchmakers</div>
-                    <div className="col-8">
+                    <div  className='text col-lg-4'>Discover Our Collection Made By The Most Experienced Watchmakers</div>
+                    <div  className="watch float-lg-left col-lg-8">
                     <div className="big-watch">
                             <img src={require('../images/ModernSport05.jpg')} alt="watch" />
                             <div className="center"></div>
