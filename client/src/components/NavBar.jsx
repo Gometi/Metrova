@@ -35,7 +35,7 @@ let navigation = (props)=>{
     
     
     return (
-        <div>
+        <div style={{ background: "#F4F4F4"}}>
             <div className="navigation">
                 <Link to="/" className="home links navBar" style={props.isHome ? navBarAnimation(3) : {}}>Home</Link>
                 <div className="analog navBar" style={props.isHome ? navBarAnimation(5) : {}}>Analog
@@ -46,8 +46,8 @@ let navigation = (props)=>{
                     <Link to="/brand/jaeger-alpha-digital" className="list links">Jaeger Alpha</Link>
                     <Link to="/brand/mille-deluxe-digital" className="list links">Mille Deluxe</Link>
                 </div>
-                <div className="about navBar" style={props.isHome ? navBarAnimation(7) : {}}>About</div>
-                <div className="contact navBar" style={props.isHome ? navBarAnimation(9) : {}}>Contact</div>
+                <Link to="/about" className="about navBar" style={props.isHome ? navBarAnimation(7) : {}}>About</Link>
+                <Link to="/contact" className="contact navBar" style={props.isHome ? navBarAnimation(9) : {}}>Contact</Link>
                 <div className="cart-icon navBar" style={props.isHome ? navBarAnimation(10) : {}} onClick={displayCart}><img src={require('../images/shopping-cart-icon.png')} style={{ width: 40, height: 40 }} alt="cart-icon" />Cart <span className={cart.items.length > 0 ? "item-count" : ""}>{cart.items.length > 0 ? cart.items.length : ""}</span></div>
                 <div className="title" style={props.isHome ? titleAnimation : {}}>Metrova</div>
             </div>

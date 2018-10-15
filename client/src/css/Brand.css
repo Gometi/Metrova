@@ -22,4 +22,15 @@
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
 }
+
+.watch-item {
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.watch-item:hover {
+  opacity: .9;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
 /*# sourceMappingURL=Brand.css.map */

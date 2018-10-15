@@ -57,9 +57,9 @@ class Navigation extends Component {
                             <div className="brand-name"><Link to="/brand/mille-deluxe-digital" className=" ">Mille Deluxe</Link></div>
                         </li>
                         <hr/>
-                        <li className="about " >About</li>
+                        <li className="about1" ><Link to="/about">About</Link></li>
                         <hr/>
-                        <li className="contact ">Contact</li>
+                        <li className="contact1"><Link to="/contact">Contact</Link></li>
                         <hr/>
                         <li className="cart-icon " onClick={this.displayCart}><img src={require('../images/shopping-cart-icon.png')} style={{ width: 40, height: 40 }} alt="cart-icon" />Cart <span className={this.props.cart.items.length > 0 ? "item-count" : ""}>{this.props.cart.items.length > 0 ? this.props.cart.items.length : ""}</span></li>
 

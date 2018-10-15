@@ -9,6 +9,8 @@ import milleAnalog from './watchList/mille/milleAnalog';
 import milleDigital from './watchList/mille/milleDigital';
 import WatchDetails from './components/WatchDetails';
 import Checkout from "./components/Checkout";
+import About from "./components/About";
+import Contact from "./components/Contact";
 class App extends Component {
   render() {
     return (
@@ -20,6 +22,8 @@ class App extends Component {
           <Route path="/brand/mille-deluxe-analog" component={() => (<Brand brand={milleAnalog} />)} />
           <Route path="/brand/mille-deluxe-digital" component={() => (<Brand brand={milleDigital} />)} />
           <Route path="/checkout" component={Checkout} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route exact path="/" component={Home} />
         </Switch>
       </div>

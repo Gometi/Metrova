@@ -6,7 +6,7 @@ import { Card, CardImg, CardBody, CardTitle, CardText} from "reactstrap";
 import Footer from "./Footer";
 class Brand extends Component{
     render(){
-        let link = "/watch_details/"
+        let link = "/watch_details/";
         return(
             <div>
                 <NavBar/>
@@ -23,16 +23,16 @@ class Brand extends Component{
                         </div>
                     </div>
                 </div>
-                    <div className="container-fluid">
+                <div className="container-fluid" style={{ backgroundImage: "linear-gradient(#EBECEE, #EBF6FD)"}}>
                     <div className="row justify-content-center">
                             {this.props.brand.items.map((item, index) => (
-                                <Card key={index} className="shadow m-3">
+                                <Card key={index} className="watch-item shadow m-3">
                                 <Link to={link + item.name}>
                                     <CardImg top width="100%" className=" img-fluid" src={item.image} style={{ width: 280, height: 350 }} alt="item" />
                                 </Link>
                                     <CardBody>
                                         <CardTitle className="item-title">{item.name}</CardTitle>
-                                        <CardText className="bg-light">${item.price}</CardText>
+                                        <CardText className="bg-light">${item.price.toFixed(2)}</CardText>
                                     </CardBody>
                                 </Card>
                             ))
