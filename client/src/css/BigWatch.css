@@ -173,4 +173,13 @@
     margin-left: -200px;
   }
 }
+
+@media screen and (max-width: 660px) {
+  .watch {
+    position: relative;
+    margin-left: -240px;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
 /*# sourceMappingURL=BigWatch.css.map */

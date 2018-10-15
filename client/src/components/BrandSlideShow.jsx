@@ -24,8 +24,8 @@ class BrandSlideShow extends Component{
        return(
            <div>
                <Link className="link" to={this.props.brand[this.state.activeIndex].link}>
-               <Card className="brand text-dark shadow m-4" style={{width: 500, height: 550}}>
-                   <CardImg className="img-fluid" top width="100%" src={this.props.brand[this.state.activeIndex].src} style={{ width: 500, height: 300 }} alt={this.props.brand[this.state.activeIndex].altText} />
+               <Card className="brand text-dark shadow m-4" >
+                   <CardImg className="img-fluid" top width="100%" src={this.props.brand[this.state.activeIndex].src} style={{height: 300 }} alt={this.props.brand[this.state.activeIndex].altText} />
                    <CardBody>
                        <CardTitle className="brand-title">{this.props.brand[this.state.activeIndex].title}</CardTitle>
                        <CardText className="brand-text">{this.props.brand[this.state.activeIndex].text}</CardText>

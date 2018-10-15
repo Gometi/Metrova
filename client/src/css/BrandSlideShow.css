@@ -18,6 +18,8 @@
 }
 
 .brand {
+  width: 500px;
+  height: 550px;
   -webkit-transition: 1.5s;
   transition: 1.5s;
 }
@@ -26,5 +28,11 @@
   opacity: .9;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+@media screen and (max-width: 660px) {
+  .brand {
+    width: 400px;
+  }
 }
 /*# sourceMappingURL=BrandSlideShow.css.map */

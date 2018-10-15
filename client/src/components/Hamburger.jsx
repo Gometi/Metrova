@@ -37,7 +37,7 @@ class Navigation extends Component {
             <div>
                 <div className="navigation1">
                     <div>
-                    <span className="title1 float-right">Metrova</span>
+                    <span className="title1">Metrova</span>
                     <button className={this.state.isActive ? "hamburger  hamburger--spin is-active" : "hamburger hamburger--spin"} onClick={this.openNavigation} type="button">
                         <span className="hamburger-box">
                             <span className="hamburger-inner"></span>
