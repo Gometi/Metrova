@@ -158,6 +158,27 @@
   }
 }
 
+@media screen and (max-width: 1920px) {
+  .navigation {
+    left: 200px;
+    width: 1465px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .navigation {
+    left: 100px;
+    width: 1465px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .navigation {
+    left: 0px;
+    width: 1465px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .navigation {
     left: -100px;

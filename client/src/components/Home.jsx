@@ -17,7 +17,7 @@ class Home extends Component {
             <div className="container-fluid">
             <NavBar isHome = {true}/>
                 <div className="brand-statement-container row">
-                    <div className="brand-statement col-lg-5 col-md-12">The Ultimate symbol of style and sophistication, our divlection of mens's designer watch
+                    <div className="brand-statement col-lg-5 col-md-12">The Ultimate symbol of style and sophistication, our selection of mens's designer watch
                       brands have been chosen to showcase innovative design, cutting edge technology and the latest on-trend materials.
                     </div>
                     <div className="slideShow col-lg-7">

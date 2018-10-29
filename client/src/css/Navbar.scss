@@ -154,6 +154,25 @@ $left-position: 200px;
 }
 }
 
+@media screen and (max-width:$screen-width + 420){
+    .navigation{
+      left: $navigation-left-position + 200;
+      width: $screen-width - 35;
+    }
+}
+@media screen and (max-width:$screen-width + 300){
+    .navigation{
+      left: $navigation-left-position + 100;
+      width: $screen-width - 35;
+    }
+}
+@media screen and (max-width:$screen-width + 200){
+    .navigation{
+      left: $navigation-left-position;
+      width: $screen-width - 35;
+    }
+}
+
 
 @media screen and (max-width:$screen-width - 100){
     .navigation{
